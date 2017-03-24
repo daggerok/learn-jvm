@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:hsqldb:mem:spring-boot-scala-gradle-webapp-db
+  data:
+    rest:
+      base-path: /api/v1
+  mustache:
+    suffix: .hbs
+management:
+  context-path: /admin

@@ -1,0 +1,37 @@
+plugins {
+  id 'java'
+  id 'scala'
+  id 'org.springframework.boot' version '1.5.2.RELEASE'
+}
+
+ext {
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+  baseName = 'spring-boot-scala-gradle'
+  version = '0.0.1'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+
+  compile 'org.springframework.boot:spring-boot-starter-mustache',
+      'org.springframework.boot:spring-boot-starter-data-jpa',
+      'org.springframework.boot:spring-boot-starter-data-rest',
+      'org.springframework.boot:spring-boot-starter-actuator',
+      //'org.hibernate:hibernate-validator',
+      'org.hsqldb:hsqldb',
+      'org.scala-lang:scala-library:2.12.1',
+      'org.webjars:webjars-locator:0.32-1',
+      'org.webjars:normalize.css:5.0.0'
+
+  runtime 'org.springframework.boot:spring-boot-devtools'
+
+  testCompile 'org.springframework.boot:spring-boot-starter-test',
+      'junit:junit'
+}
