@@ -1,5 +1,5 @@
 .idea/
-!*.idea/runConfigurations/WebApplication.xml
+!*.idea/runConfigurations/*WebApp*.xml
 .settings/
 .springBeans
 .classpath

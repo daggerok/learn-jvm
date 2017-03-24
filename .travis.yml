@@ -3,12 +3,12 @@ dist: trusty
 language: java
 jsdk: oraclejdk8
 install: true
-before_install:
-  - nvm install 7
+#before_install:
+#  - nvm install 7
 script:
   - gradle clean build
-after_script:
-  - if [ -f secured-client/src/main/react/npm-debug.log ]; then cat secured-client/src/main/react/npm-debug.log; fi
+#after_script:
+#  - if [ -f path/to/file.log ]; then cat path/to/file.log; fi
 cache:
   directories:
     - node_modules

@@ -1,2 +1,3 @@
 rootProject.name = 'learn-jvm'
-include ':spring-boot-scala-gradle-webapp'
+include ':spring-boot:java'
+include ':spring-boot:scala'
