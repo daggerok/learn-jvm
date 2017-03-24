@@ -1,13 +1,13 @@
 server:
-  port: 8001
+  port: 8000
 spring:
   application:
-    name: spring-boot-java-gradle-webapp
+    name: spring-boot-groovy-gradle-webapp
   jpa:
     hibernate:
       ddl-auto: create-drop
   datasource:
-    url: jdbc:hsqldb:mem:spring-boot-java-gradle-webapp-db
+    url: jdbc:hsqldb:mem:spring-boot-groovy-gradle-webapp-db
   data:
     rest:
       base-path: /api/v1

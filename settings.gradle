@@ -1,3 +1,4 @@
 rootProject.name = 'learn-jvm'
+include ':spring-boot:groovy'
 include ':spring-boot:java'
 include ':spring-boot:scala'

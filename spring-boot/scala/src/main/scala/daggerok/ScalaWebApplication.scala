@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Import
   classOf[AppConfig]
 ))
 @SpringBootApplication
-class WebApplicationConfig
+class ScalaWebApplicationConfig
 
 object WebApplication extends App {
-  SpringApplication.run(classOf[WebApplicationConfig])
+  SpringApplication.run(classOf[ScalaWebApplicationConfig])
 }

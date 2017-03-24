@@ -11,7 +11,7 @@ ext {
 
 jar {
   baseName = 'spring-boot-scala'
-//  version = '0.0.1'
+  version = '0.0.1'
 }
 
 repositories {

@@ -17,6 +17,7 @@ gradle --parallel build
 === java
 
 ```bash
+java -jar spring-boot/groovy/build/libs/*.jar
 java -jar spring-boot/java/build/libs/*.jar
 java -jar spring-boot/scala/build/libs/*.jar
 ```

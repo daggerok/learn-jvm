@@ -1,5 +1,5 @@
 plugins {
-  id 'java'
+  id 'groovy'
   id 'org.springframework.boot' version '1.5.2.RELEASE'
 }
 
@@ -9,7 +9,7 @@ ext {
 }
 
 jar {
-  baseName = 'spring-boot-java'
+  baseName = 'spring-boot-groovy'
   version = '0.0.1'
 }
 
@@ -19,17 +19,16 @@ repositories {
 
 dependencies {
 
-  compile 'org.springframework.boot:spring-boot-starter-mustache',
+  compile 'org.springframework.boot:spring-boot-starter-actuator',
       'org.springframework.boot:spring-boot-starter-data-jpa',
       'org.springframework.boot:spring-boot-starter-data-rest',
-      'org.springframework.boot:spring-boot-actuator',
+      'org.springframework.boot:spring-boot-starter-mustache',
+      'org.codehaus.groovy:groovy',
       'org.webjars:webjars-locator:0.32-1',
       'org.webjars:normalize.css:5.0.0'
 
   runtime 'org.springframework.boot:spring-boot-devtools',
       'org.hsqldb:hsqldb'
-
-  compileOnly 'org.projectlombok:lombok'
 
   testCompile 'org.springframework.boot:spring-boot-starter-test'
 }

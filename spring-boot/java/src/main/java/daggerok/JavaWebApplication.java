@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 @Import({ AppConfig.class })
-public class WebApplication {
+public class JavaWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebApplication.class, args);
+        SpringApplication.run(JavaWebApplication.class, args);
     }
 }
