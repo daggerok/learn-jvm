@@ -1,0 +1,29 @@
+plugins {
+  id 'java'
+  id 'com.moowork.node' version '1.1.1'
+}
+
+ext {
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+  baseName = 'angular2-web-ui'
+  version = '0.0.1'
+}
+
+repositories {
+  mavenCentral()
+}
+
+node {
+  download = true
+  version = '7.7.4'
+  npmVersion = '4.1.2'
+  yarnVersion = '0.21.3'
+}
+
+assemble.dependsOn yarn_build
+yarn_build.dependsOn yarn_install
+yarn_install.dependsOn yarn_cache_clean

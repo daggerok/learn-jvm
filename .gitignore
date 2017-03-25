@@ -22,7 +22,7 @@ target/
 _ghpages_/
 hello-world/
 **/dist/*
-**/node_modules/*
+node_modules/
 nbproject/private/
 nbbuild/
 dist/
