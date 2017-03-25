@@ -1,0 +1,57 @@
+buildscript {
+  ext {
+    kotlinVersion = '1.1.1'
+    springBootVersion = '1.5.2.RELEASE'
+  }
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+    classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+  }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-spring'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+ext {
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+  baseName = 'spring-boot-kotlin'
+  version = '0.0.1'
+}
+
+repositories {
+  mavenCentral()
+}
+
+compileKotlin {
+  kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
+}
+
+compileTestKotlin {
+  kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-actuator',
+      'org.springframework.boot:spring-boot-starter-data-jpa',
+      'org.springframework.boot:spring-boot-starter-data-rest',
+      'org.springframework.boot:spring-boot-starter-mustache',
+      "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+      "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}",
+      'org.webjars:webjars-locator:0.32-1',
+      'org.webjars:normalize.css:5.0.0'
+
+  runtime 'org.springframework.boot:spring-boot-devtools',
+      'org.hsqldb:hsqldb'
+
+  testCompile 'org.springframework.boot:spring-boot-starter-test'
+}

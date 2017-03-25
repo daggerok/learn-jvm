@@ -1,10 +1,11 @@
 = learn-jvm image:https://travis-ci.org/daggerok/learn-jvm.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/learn-jvm"]
 
-repository contains some simple gradle projects which are doing same, but implemented using different jvm languages
+repository contains a few same simple gradle projects implemented using different jvm languages:
 
-== :spring-boot:scala
-
-web application using spring-boot scala and gradle
+- groovy
+- java
+- kotlin
+- scala
 
 === gradle
 
@@ -19,5 +20,14 @@ gradle --parallel build
 ```bash
 java -jar spring-boot/groovy/build/libs/*.jar
 java -jar spring-boot/java/build/libs/*.jar
+java -jar spring-boot/kotlin/build/libs/*.jar
 java -jar spring-boot/scala/build/libs/*.jar
 ```
+
+*links*
+
+- http://groovy-lang.org/learn.html[groovy]
+- http://kotlinlang.org/docs/reference/[kotlin]
+- https://www.scala-lang.org/documentation/[scala]
+- https://spring.io/[spring]
+- http://asciidoctor.org/docs/asciidoc-writers-guide/[adoc]

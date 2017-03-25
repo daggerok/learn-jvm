@@ -1,4 +1,4 @@
-package daggerok.domain
+package daggerok.data
 
 import java.lang.Long
 

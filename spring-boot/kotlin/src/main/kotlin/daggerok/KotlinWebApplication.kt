@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Import
 
 @SpringBootApplication
-@Import(Array(classOf[AppConfig]))
-class ScalaWebApplicationConfig
+@Import(AppConfig::class)
+class KotlinApplication
 
-object WebApplication extends App {
-  SpringApplication.run(classOf[ScalaWebApplicationConfig])
+fun main(args: Array<String>) {
+  SpringApplication.run(KotlinApplication::class.java, *args)
 }
