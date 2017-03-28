@@ -1,6 +1,10 @@
-<p>
-  home works!
-</p>
-<pre>
-  {{ content }}
-</pre>
+<div>
+  <h3>JVM</h3>
+  <div *ngFor="let file of jvmSourceFiles">
+    <pre>
+      <code class="{{ file.lang }}">
+        {{ file.content }}
+      </code>
+    </pre>
+  </div>
+</div>

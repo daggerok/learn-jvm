@@ -1,0 +1,25 @@
+{
+  "vsicons.presets.angular": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.useTabStops": true,
+  "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/e2e/*.js": true,
+    "**/e2e/*.js.map": true,
+    "**/src/*.js": true,
+    "**/src/*.js.map": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/e2e/*.js": true,
+    "**/e2e/*.js.map": true,
+    "**/src/*.js": true,
+    "**/src/*.js.map": true
+  }
+}

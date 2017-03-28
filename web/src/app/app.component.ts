@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import './app.component.styl';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.styl']
+  styles: [``],
 })
 export class AppComponent {
   title = 'app works!';

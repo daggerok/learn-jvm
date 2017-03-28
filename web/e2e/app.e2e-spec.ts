@@ -1,10 +1,10 @@
-import { WebPage } from './app.po';
+import { Ng4Page } from './app.po';
 
-describe('web App', () => {
-  let page: WebPage;
+describe('ng4 App', () => {
+  let page: Ng4Page;
 
   beforeEach(() => {
-    page = new WebPage();
+    page = new Ng4Page();
   });
 
   it('should display message saying app works', () => {

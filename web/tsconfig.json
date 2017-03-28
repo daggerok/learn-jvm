@@ -15,6 +15,14 @@
     "lib": [
       "es2016",
       "dom"
-    ]
+    ],
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src",
+    "../spring-boot"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "./app/gen"
   }
 }
