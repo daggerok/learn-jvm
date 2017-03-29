@@ -19,7 +19,19 @@
     "sleep": "sleep 1",
     "webdriver-manager-update": "webdriver-manager update",
     "start-server": "browser-sync start --config bs-config.js",
-    "server": "npm run start-server -- --no-notify --no-open --no-online --no-inject-changes --no-reload-on-restart"
+    "server": "npm run start-server -- --no-notify --no-open --no-online --no-inject-changes --no-reload-on-restart",
+    "compose": "docker-compose --project-name=web -f ./nginx/docker-compose.yml",
+    "precompose-up": "npm run build",
+    "compose-up": "npm run compose -- up -d --remove-orphans",
+    "compose-down": "npm run compose -- down --remove-orphans --rmi local -v",
+    "docker": "npm-run-all build docker:*",
+    "docker:rm": "docker rm -f daggerok-learn-jvm | true",
+    "docker:rmi": "docker rmi -f daggerok/learn-jvm:latest | true",
+    "docker:build": "docker build --rm -t daggerok/learn-jvm:latest -f ./nginx/Dockerfile .",
+    "docker:tag": "docker tag daggerok/learn-jvm:latest daggerok/learn-jvm:$(date +%Y-%m-%d-%H)",
+    "docker:push": "docker push daggerok/learn-jvm:$(date +%Y-%m-%d-%H)",
+    "docker:tag-latest": "docker tag daggerok/learn-jvm:$(date +%Y-%m-%d-%H) daggerok/learn-jvm:latest",
+    "docker:push-latest": "docker push daggerok/learn-jvm:latest"
   },
   "pre-push": [
     "test",
