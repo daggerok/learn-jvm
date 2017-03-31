@@ -1,7 +1,8 @@
-## docker build --rm -t daggerok/learn-jvm:latest -f config/nginx/Dockerfile .
-## docker push daggerok/learn-jvm:latest
-## docker run -d -p 80:80 --name daggerok-learn-jvm daggerok/learn-jvm:latest
+## docker build --rm -t daggerok/learn-jvm-ui -f nginx/Dockerfile .
+## docker tag daggerok/learn-jvm-ui daggerok/learn-jvm-ui:latest
+## docker push daggerok/learn-jvm-ui:latest
+## docker run -d -p 80:80 --name daggerok-learn-jvm-ui daggerok/learn-jvm-ui:latest
 
 FROM nginx:1.10.3-alpine
 COPY dist /usr/share/nginx/html
-COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf

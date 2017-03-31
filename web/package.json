@@ -20,7 +20,7 @@
     "webdriver-manager-update": "webdriver-manager update",
     "start-server": "browser-sync start --config bs-config.js",
     "server": "npm run start-server -- --no-notify --no-open --no-online --no-inject-changes --no-reload-on-restart",
-    "compose": "docker-compose --project-name=web -f ./nginx/docker-compose.yml",
+    "compose": "docker-compose --project-name=learn-jvm-ui -f ./nginx/docker-compose.yml",
     "precompose-up": "npm run build",
     "compose-up": "npm run compose -- up -d --remove-orphans",
     "compose-down": "npm run compose -- down --remove-orphans --rmi local -v",

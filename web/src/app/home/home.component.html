@@ -1,6 +1,6 @@
 <div>
   <h4>JVM languages</h4>
-  <ul *ngFor="let file of jvmSourceFiles">
+  <ul *ngFor="let file of jvmSourceFiles;">
     <li>
       <p>{{ file.lang }}</p>
       <pre><code class="{{ file.lang }}">{{ file.content }}</code></pre>
