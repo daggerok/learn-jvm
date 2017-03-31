@@ -22,6 +22,7 @@ class JvmSourceFile {
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styles: [` ul { list-style: none; } `],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 

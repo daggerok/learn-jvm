@@ -1,5 +1,5 @@
 {
-  "name": "learn-jvm-web-ui",
+  "name": "learn-jvm-ui",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -25,13 +25,14 @@
     "compose-up": "npm run compose -- up -d --remove-orphans",
     "compose-down": "npm run compose -- down --remove-orphans --rmi local -v",
     "docker": "npm-run-all build docker:*",
-    "docker:rm": "docker rm -f daggerok-learn-jvm | true",
-    "docker:rmi": "docker rmi -f daggerok/learn-jvm:latest | true",
-    "docker:build": "docker build --rm -t daggerok/learn-jvm:latest -f ./nginx/Dockerfile .",
-    "docker:tag": "docker tag daggerok/learn-jvm:latest daggerok/learn-jvm:$(date +%Y-%m-%d-%H)",
-    "docker:push": "docker push daggerok/learn-jvm:$(date +%Y-%m-%d-%H)",
-    "docker:tag-latest": "docker tag daggerok/learn-jvm:$(date +%Y-%m-%d-%H) daggerok/learn-jvm:latest",
-    "docker:push-latest": "docker push daggerok/learn-jvm:latest"
+    "docker:rm": "docker rm -f daggerok-learn-jvm-ui | true",
+    "docker:rmi": "docker rmi -f daggerok/learn-jvm-ui | true",
+    "predocker:build": "npm run build",
+    "docker:build": "docker build --rm -t daggerok/learn-jvm-ui -f ./nginx/Dockerfile .",
+    "docker:tag": "docker tag daggerok/learn-jvm-ui daggerok/learn-jvm-ui:$(date +%Y-%m-%d-%H)",
+    "docker:tag:latest": "docker tag daggerok/learn-jvm-ui daggerok/learn-jvm-ui:latest",
+    "docker:push": "docker push daggerok/learn-jvm-ui:$(date +%Y-%m-%d-%H)",
+    "docker:push:latest": "docker push daggerok/learn-jvm-ui:latest"
   },
   "pre-push": [
     "test",
@@ -40,14 +41,13 @@
   ],
   "private": true,
   "dependencies": {
-    "@angular/common": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/compiler": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/core": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/forms": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/http": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/platform-browser": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/platform-browser-dynamic": ">=4.0.0-rc.5 <5.0.0",
-    "@angular/router": ">=4.0.0-rc.5 <5.0.0",
+    "@angular/common": ">=4.0.0 <5.0.0",
+    "@angular/core": ">=4.0.0 <5.0.0",
+    "@angular/forms": ">=4.0.0 <5.0.0",
+    "@angular/http": ">=4.0.0 <5.0.0",
+    "@angular/platform-browser": ">=4.0.0 <5.0.0",
+    "@angular/platform-browser-dynamic": ">=4.0.0 <5.0.0",
+    "@angular/router": ">=4.0.0 <5.0.0",
     "angular2-highlight-js": "4.0.0",
     "core-js": "2.4.1",
     "normalize.css": "6.0.0",
@@ -56,10 +56,11 @@
   },
   "devDependencies": {
     "@angular/cli": "1.0.0",
-    "@angular/compiler-cli": ">=4.0.0-rc.5 <5.0.0",
+    "@angular/compiler": ">=4.0.0 <5.0.0",
+    "@angular/compiler-cli": ">=4.0.0 <5.0.0",
     "@types/jasmine": "2.5.45",
-    "@types/node": "7.0.11",
-    "@types/selenium-webdriver": "3.0.0",
+    "@types/node": "7.0.12",
+    "@types/selenium-webdriver": "3.0.1",
     "@ultimate/aot-loader": "0.1.15",
     "angular2-router-loader": "0.3.5",
     "angular2-template-loader": "0.6.2",
@@ -70,7 +71,7 @@
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-plugin-transform-class-properties": "6.23.0",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
-    "babel-preset-env": "1.2.2",
+    "babel-preset-env": "1.3.2",
     "babel-preset-stage-0": "6.22.0",
     "base-href-webpack-plugin": "1.0.2",
     "browser-sync": "2.18.8",
@@ -78,9 +79,9 @@
     "compression-webpack-plugin": "0.3.2",
     "concurrently": "3.4.0",
     "connect-history-api-fallback": "1.3.0",
-    "css-loader": "0.27.3",
+    "css-loader": "0.28.0",
     "extract-text-webpack-plugin": "2.1.0",
-    "file-loader": "0.10.1",
+    "file-loader": "0.11.0",
     "html-webpack-plugin": "2.28.0",
     "http-proxy-middleware": "0.17.4",
     "image-webpack-loader": "3.3.0",
@@ -93,9 +94,9 @@
     "karma-jasmine": "1.1.0",
     "karma-jasmine-html-reporter": "0.2.2",
     "less": "2.7.2",
-    "less-loader": "4.0.2",
+    "less-loader": "4.0.3",
     "lite-server": "2.3.0",
-    "node-sass": "4.5.1",
+    "node-sass": "4.5.2",
     "npm-run-all": "4.0.2",
     "postcss-loader": "1.3.3",
     "pre-push": "0.1.1",
@@ -106,12 +107,12 @@
     "rucksack-css": "0.9.1",
     "sass-loader": "6.0.3",
     "script-ext-html-webpack-plugin": "1.7.1",
-    "source-map-loader": "0.2.0",
-    "style-loader": "0.16.0",
+    "source-map-loader": "0.2.1",
+    "style-loader": "0.16.1",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.1",
     "ts-node": "3.0.2",
-    "tslint": "^4.5.1",
+    "tslint": "<5.0.0",
     "typescript": "2.2.2",
     "url-loader": "0.5.8",
     "webpack": "2.3.2",
@@ -125,7 +126,12 @@
           "targets": {
             "browsers": [
               "last 4 versions",
-              "safari >= 7"
+              "ie >= 7"
+            ],
+            "node": [
+              6,
+              7,
+              "current"
             ]
           }
         }

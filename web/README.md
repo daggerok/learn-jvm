@@ -12,5 +12,5 @@ yarn serve
 yarn start
 yarn lint
 yarn test
-ncu -u -x @types/jasmine
+ncu -u -x @types/jasmine,tslint
 ```
