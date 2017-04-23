@@ -1,4 +1,4 @@
-sudo: required
+group: edge
 dist: trusty
 language: node_js
 node_js:
@@ -6,7 +6,7 @@ node_js:
   - 7
 install: true
 env:
-  DOCKER_COMPOSE_VERSION: 1.11.2
+  DOCKER_COMPOSE_VERSION: 1.12.0
 before_install:
   # chrome
   - export CHROME_BIN=/usr/bin/google-chrome
