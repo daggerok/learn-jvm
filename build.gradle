@@ -2,3 +2,9 @@ plugins {
   id 'idea'
   id 'java'
 }
+
+allprojects {
+  apply plugin: "base"
+  defaultTasks "clean", "build"
+}
+
