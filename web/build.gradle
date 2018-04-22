@@ -1,6 +1,6 @@
 plugins {
   id 'java'
-  id 'com.moowork.node' version '1.1.1'
+  id 'com.moowork.node' version '1.2.0'
 }
 
 ext {
@@ -19,9 +19,9 @@ repositories {
 
 node {
   download = true
-  version = '7.7.4'
-  npmVersion = '4.1.2'
-  yarnVersion = '0.21.3'
+  version = '9.11.1'
+  npmVersion = '5.6.0'
+  yarnVersion = '1.6.0'
 }
 
 assemble.dependsOn yarn_build
